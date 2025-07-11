@@ -20,6 +20,8 @@ class Application < Rails::Application
   # This also configures session_options for use below
   config.session_store :cookie_store, key: '_interslice_session'
 
+  config.hosts << ENV['RAILS_HOSTS'] if ENV['RAILS_HOSTS'].present?
+
   # Required for all session management (regardless of session_store)
   config.middleware.use ActionDispatch::Cookies
 

@@ -15,6 +15,7 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 COPY . .
+RUN chmod +x ./docker/entrypoint.sh
 
 EXPOSE 3000
 

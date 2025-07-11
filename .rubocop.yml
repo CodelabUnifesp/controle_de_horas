@@ -1,0 +1,73 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+Metrics/MethodLength:
+  Exclude:
+    - "app/services/reports/calculate_member_hours_service.rb"
+  Max: 20
+
+Metrics/BlockLength:
+  Exclude:
+    - "db/schema.rb"
+    - "config/routes.rb"
+
+convention:Rails/Output:
+  Exclude:
+    - "db/seeds.rb"
+
+Style/NumericLiterals:
+  Exclude:
+    - "db/schema.rb"
+
+Style/WordArray:
+  Exclude:
+    - "db/schema.rb"
+
+Metrics/AbcSize:
+  Exclude:
+    - "app/finders/events_finder.rb"
+    - "app/controllers/api/v1/events_controller.rb"
+    - "app/services/reports/calculate_member_hours_service.rb"
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - "app/finders/events_finder.rb"
+    - "app/services/reports/calculate_member_hours_service.rb"
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - "app/finders/events_finder.rb"
+    - "app/services/reports/calculate_member_hours_service.rb"
+
+Metrics/ClassLength:
+  Exclude:
+    - "app/services/reports/calculate_member_hours_service.rb"
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/IndexedLet:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 25
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 20
+
+RSpec/NestedGroups:
+  Max: 10
